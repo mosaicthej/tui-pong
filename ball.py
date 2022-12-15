@@ -16,7 +16,7 @@ import math
 from paddle import Paddle
 
 class Ball:
-    def __init__(self: 'Ball', pos: tuple(int, int), dir: tuple(int, int), char: str) -> None:
+    def __init__(self: 'Ball', pos: tuple[int, int], dir: tuple[int, int], char: str) -> None:
         self.pos = pos
         self.dir = dir
         self.char = char
@@ -74,5 +74,3 @@ class Ball:
         self.pos = (width // 2, height // 2)
         # set the ball to be at rest
         self.dir = (0, 0)
-
-        

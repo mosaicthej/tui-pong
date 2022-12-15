@@ -6,7 +6,7 @@
 import math
 
 class Paddle:
-    def __init__(self: 'Paddle', pos: tuple(int, int), height: int, char: str) -> None:
+    def __init__(self: 'Paddle', pos: tuple[int, int], height: int, char: str) -> None:
         self.pos = pos  # center of the paddle
         self.height = height
         self.char = char
@@ -18,3 +18,6 @@ class Paddle:
             self.pos = (self.pos[0], 0)
         if self.pos[1] + self.height > height:
             self.pos = (self.pos[0], height - self.height)
+
+    def reset(self: 'Paddle', height: int, width: int) -> None:
+        self.pos = (width // 2, height // 2)
