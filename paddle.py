@@ -19,5 +19,5 @@ class Paddle:
         if self.pos[1] + self.height > height:
             self.pos = (self.pos[0], height - self.height)
 
-    def reset(self: 'Paddle', height: int, width: int) -> None:
-        self.pos = (width // 2, height // 2)
+    def reset(self: 'Paddle', height: int) -> None:
+        self.pos = (self.pos[0], height // 2)
